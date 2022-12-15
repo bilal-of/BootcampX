@@ -9,7 +9,7 @@ const pool = new Pool({
 
 const cohortName = process.argv[2];
 const limit = process.argv[3] || 5;
-//Storing malicious values
+// Store all potentially malicious values in an array.
 const values = [`%${cohortName}%`, limit];
 const queryString = `
 SELECT students.id as student_id, students.name as name, cohorts.name as cohort
